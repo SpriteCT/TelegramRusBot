@@ -3,7 +3,7 @@ from telebot import types
 import random
 
 VOWELS = ["а", "я", "о", "ё", "у", "е", "э", "ю", "ы", "и"]
-bot = telebot.TeleBot("5629823362:AAHZx3awrxujHcKviF9QMtkc-xMDNNGZFDA")
+bot = telebot.TeleBot("")
 users_list = dict()
 t = open("word_list.txt", encoding='utf-8')
 word_list_file = t
@@ -147,4 +147,4 @@ def answer(call):
             users_list[call.message.chat.id].reset()
 
 
-bot.polling(none_stop=True)
+bot.infinity_polling(allowed_updates=False)
